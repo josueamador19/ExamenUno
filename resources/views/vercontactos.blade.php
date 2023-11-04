@@ -57,21 +57,19 @@
 
                                     <table class="table">
                                         <thead>                                            
-                                            <th scope="col" name="nombre">Id</th>
+                                            <th scope="col" name="id">Id</th>
                                             <th scope="col" name="nombre">Nombre</th>
-                                            <th scope="col" name="tipoElectrodomestico">Apellido</th>
-                                            <th scope="col" name="precio">Tel&eacute;fono</th>                                            
+                                            <th scope="col" name="apellido">Apellido</th>
+                                            <th scope="col" name="telefono">Tel&eacute;fono</th>                                            
                                             <th scope="col">Eliminar</th>
                                         </thead>
                                         <tbody>
                                         @foreach ($contactos as $item)
                                         <tr>
-                                            <th scope="row">{{$item->id}}</th>
+                                            <td>{{$item->id}}</td>
                                             <td>{{$item->nombre}}</td>
                                             <td>{{$item->apellido}}</td>
-                                            <td>{{$item->correo}}</td>
                                             <td>{{$item->telefono}}</td>
-                                            
                                         </tr>
                                         @endforeach
                                     

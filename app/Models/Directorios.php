@@ -10,6 +10,8 @@ class Directorios extends Model
     use HasFactory;
     
     protected $table = 'directorios';
+    protected $primaryKey = 'codigoEntrada';
     public $incrementing = false;
     public $timestamps = false;
+
 }

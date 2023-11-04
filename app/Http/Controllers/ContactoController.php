@@ -37,10 +37,20 @@ class ContactoController extends Controller
         
     }
     
-   
-    public function list($id){
+    
+    public function searchCorreo(Request $correo){
+        
+        $contacto=Contactos::find($correo);
+        $contacto->correo=$request->input("correo");
+        if($contacto<>null){
+            return $contacto;
+        }
+        
+    }
+    public function show($id){
         $contactos=Contactos::find($id);
-        return view('directorio',compact('contactos'));
+        //return $contactos;
+        return view('vercontactos',compact('contactos'));
     }
     
     

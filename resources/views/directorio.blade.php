@@ -39,8 +39,8 @@
                             <td>{{$item->nombre}}</td>
                             <td>{{$item->apellido}}</td>
                             <td>{{$item->telefono}}</td>
-                            <td><a class="btn btn-primary" href="{{route('verLista',$item->id)}}">Ver</a></td>
-                            <td><a class="btn btn-danger" href="{{route('verContacto')}}">Eliminar</a></td>
+                            <td><a class="btn btn-primary" href="{{route('verContacto',$item->id)}}">Ver</a></td>
+                            <td><a class="btn btn-danger" href="#">Eliminar</a></td>
                         </tr>
                         @endforeach
           

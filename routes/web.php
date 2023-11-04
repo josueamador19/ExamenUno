@@ -21,7 +21,8 @@ Route::get('/',[ContactoController::class,'index'])->name('inicioContacto');
 Route::get('/contacto/crear',[ContactoController::class,'create'])->name('crearContacto');
 Route::post('/contacto/guardar',[ContactoController::class,'store'])->name('storeContacto');
 Route::get('/contacto/buscar',[ContactoController::class,'search'])->name('buscarContacto');
-Route::get('/contacto/lista/{id}',[ContactoController::class,'list'])->name('verLista');
-Route::get('/contacto/eliminar/',[ContactoController::class,'show'])->name('verContacto');
-Route::get('/contacto/eliminar/{id}',[ContactoController::class,'show'])->name('eliminarContacto');
+Route::get('/contacto/buscar/{correo?}',[ContactoController::class,'searchCorreo'])->name('buscarCorreo');
+
+Route::get('/contacto/vercontacto/{id}',[ContactoController::class,'show'])->name('verContacto');
+
 //Route::get('/',[ContactoController::class,'goBack'])->name('regresar');
